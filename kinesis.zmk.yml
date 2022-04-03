@@ -1,0 +1,9 @@
+file_format: "1"
+id: kinesis
+name: Kinesis
+type: shield
+url: https://github.com/Matoch/zmk_kinesis/
+requires:
+  - nice_nano
+features:
+  - keys

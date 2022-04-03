@@ -1,6 +1,13 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+
+#define QWERTY 0
+#define LOWER 1
+#define UPPER 2
+#define ADJUST 3
+#define NUM 4
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -25,7 +32,97 @@
     &kp BSPC   &kp DEL   &kp END  &kp HOME  &kp LALT  &kp LCTRL &kp RCTRL &kp LCMD &kp PG_UP &kp PG_DN &kp ENTER &kp SPACE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        lower_layer {
+// ----------------------------------------------------------------------------------------------------
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+
+            bindings = <
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+            >;
+
+        };
+
+        raise_layer {
+// ----------------------------------------------------------------------------------------------------
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// ----------------------------------------------------------------------------------------------------
+
+            bindings = <
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+            >;
+
+        };
+
+        adjust_layer {
+// ----------------------------------------------------------------------------------------------------
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// ----------------------------------------------------------------------------------------------------
+
+            bindings = <
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+            >;
+
+        };
+
+        num_layer {
+// ----------------------------------------------------------------------------------------------------
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// |        |       |       |       |       |       |       |       |       |       |        |        |
+// ----------------------------------------------------------------------------------------------------
+
+            bindings = <
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+            >;
+
         };
     };
 };
