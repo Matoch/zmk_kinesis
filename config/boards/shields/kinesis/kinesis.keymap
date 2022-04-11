@@ -42,14 +42,14 @@
     &kp LCTRL &kp A     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI   &kp APOS
     &kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp SLASH  &kp RSHFT
     &none     &kp GRAVE &kp BSLH  &kp LEFT  &kp RIGHT &none     &none     &kp UP    &kp DOWN  &kp LBKT  &kp RBKT   &none
-    &kp LGUI  &kp SPACE &kp END   &kp HOME  &kp LALT  &mo UPPER &mo LOWER &kp LGUI  &kp PG_UP &kp PG_DN &kp ENTER  &kp BSPC
+    &kp LGUI  &kp SPACE &kp END   &kp HOME  &kp LALT  &mo LOWER &mo UPPER &kp LGUI  &kp PG_UP &kp PG_DN &kp ENTER  &kp BSPC
             >;
 
         };
 
         lower_layer {
 // ----------------------------------------------------------------------------------------------------------------------------
-// |          |         |         |         |         |         |         |         |         |         |          |          |
+// |          |         |         |         |         |         |         |         |         | NUMPAD  |          |          |
 // |          |         |         |         |         |         |         |         |         |         |          |          |
 // |          |         |         |         |         |         |         |         |         |         |          |          |
 // |          |         |         |         |         |         |   -_    |   =+    |   [{    |    ]}   |    \|    |          |
@@ -69,7 +69,7 @@
 //
 
             bindings = <
-    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &trans    &trans    &trans    &trans     &trans
+    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &trans    &trans    &to 4    &trans     &trans
     &trans    &trans    &trans    &trans    &trans    &trans     &trans    &trans    &trans    &trans    &trans     &trans
     &kp ESC   &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6     &kp N7    &kp N8    &kp N9    &kp N0     &trans 
     &trans    &trans    &trans    &trans    &trans    &trans     &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH   &trans
@@ -146,7 +146,7 @@
 
         num_layer {
 // ----------------------------------------------------------------------------------------------------------------------------
-// |          |         |         |         |         |         |         |         |         |         |          |          |
+// |          |         |         |         |         |         |         |         |         |  BASE   |          |          |
 // |          |         |         |         |         |         |         | Num Lck |    =    |    /    |     *    |          |
 // |          |         |         |         |         |         |         |    7    |    8    |    9    |     +    |          |
 // |          |         |         |         |         |         |         |    4    |    5    |    6    |     +    |          |
@@ -165,13 +165,13 @@
 //
 
             bindings = <
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans
-    &none     &trans    &trans    &trans    &trans    &none     &none     &trans    &trans    &trans    &trans     &none
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans
+    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans       &to 0        &trans          &trans
+    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &trans
+    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_PLUST    &trans
+    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUST    &trans
+    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &trans
+    &none     &trans    &trans    &trans    &trans    &none     &none     &trans     &trans       &kp DEL       &kp KP_ENTER    &none
+    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans       &trans        &trans          &kp KP_N0
             >;
         };
     };
