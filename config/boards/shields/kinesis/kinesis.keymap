@@ -14,10 +14,10 @@
 
         default_layer {
 // ----------------------------------------------------------------------------------------------------------------------------
-// |   Esc    |   F1    |   F2    |   F3    |   F4    |   F5    |   F6    |   F7    |   F8    |   F9    |   F10    |  RST     |
+// |   Esc    |   F1    |   F2    |   F3    |   F4    |   F5    |   F6    |   F7    |   F8    |   F9    |   RST    |  BTLDR   |
 // |   +/=    |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |    9    |    0     |  -/_     |
 // |   TAB    |    Q    |    W    |    E    |    R    |    T    |    Y    |    U    |    I    |    O    |    P     |  :/\     |
-// |   CAPS   |    A    |    S    |    D    |    F    |    G    |    H    |    J    |    K    |    L    |    ;     |  '/"     |
+// |   CTRL   |    A    |    S    |    D    |    F    |    G    |    H    |    J    |    K    |    L    |    ;     |  '/"     |
 // |  LSHIFT  |    Z    |    X    |    C    |    V    |    B    |    N    |    M    |    ,    |    .    |    /     |  RSHIFT  |
 // |          |    ~    |   :/\   |   LA    |   RA    |         |         |    UA   |   DA    |    [    |    ]     |          |
 // |    BS    |   DEL   |   END   |  HOME   |   ALT   |   CTRL  |   CTRL  |   LGUI  |  PgUp   |   PgDn  |  ENTER   |  SPACE   |
@@ -27,10 +27,10 @@
     &kp ESC   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6    &kp F7    &kp F8    &kp F9    &reset     &bootloader
     &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0     &kp MINUS
     &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T     &kp Y     &kp U     &kp I     &kp O     &kp P      &kp BSLH
-    &kp CAPS  &kp A     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI   &kp APOS
+    &kp LCTRL &kp A     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI   &kp APOS
     &kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp SLASH  &kp RSHFT
     &none     &kp GRAVE &kp BSLH  &kp LEFT  &kp RIGHT &none     &none     &kp UP    &kp DOWN  &kp LBKT  &kp RBKT   &none
-    &kp BSPC  &kp DEL   &kp END   &kp HOME  &kp LALT  &kp LCTRL &kp RCTRL &kp LGUI  &kp PG_UP &kp PG_DN &kp ENTER  &kp SPACE
+    &kp LGUI  &kp SPACE &kp END   &kp HOME  &kp LALT  &mo LOWER &mo UPPER &kp LGUI  &kp PG_UP &kp PG_DN &kp ENTER  &kp BSPC
             >;
 
         };
@@ -48,13 +48,13 @@
 // |          |         |         |         |         |         |         |         |         |         |          |          |
 
             bindings = <
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans
-    &trans    &trans    &trans    &trans    &trans    &trans    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans     &trans
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans
-    &none     &trans    &trans    &trans    &trans    &none     &none     &trans    &trans    &trans    &trans     &none
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans
+    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &trans    &trans    &trans     &trans
+    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &trans    &trans    &trans     &trans
+    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &trans    &trans    &trans     &trans
+    &trans    &trans    &trans    &trans    &trans    &trans    &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT &trans     &trans
+    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &trans    &trans    &trans     &trans
+    &none     &trans    &trans    &trans    &trans    &none     &none      &trans    &trans    &trans    &trans     &none
+    &trans    &trans    &trans    &trans    &trans    &trans    &mo ADJUST &trans    &trans    &trans    &trans     &trans
             >;
 
         };
@@ -71,13 +71,13 @@
 // |          |         |         |         |         |         |         |         |         |         |          |          |
 
             bindings = <
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans
-    &none     &trans    &trans    &trans    &trans    &none     &none     &trans    &trans    &trans    &trans     &none
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans
+    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &trans    &trans    &trans    &trans     &trans
+    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &trans    &trans    &trans    &trans     &trans
+    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &trans    &trans    &trans    &trans     &trans
+    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &trans    &trans    &trans    &trans     &trans
+    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &trans    &trans    &trans    &trans     &trans
+    &none     &trans    &trans    &trans    &trans    &none      &none     &trans    &trans    &trans    &trans     &none
+    &trans    &trans    &trans    &trans    &trans    &mo ADJUST &trans    &trans    &trans    &trans    &trans     &trans
             >;
         };
 
