@@ -32,7 +32,7 @@
     &kp CAPS  &kp A     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI   &kp APOS
     &kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp SLASH  &kp RSHFT
     &none     &kp GRAVE &kp BSLH  &kp LEFT  &kp RIGHT &none     &none     &kp UP    &kp DOWN  &kp LBKT  &kp RBKT   &none
-    &kp BPSC  &kp DEL   &kp END   &kp HOME  &kp LALT  &kp LCTRL &kp RCTRL &kp LGUI  &kp PG_UP &kp PG_DN &kp ENTER  &kp SPACE
+    &kp BSPC  &kp DEL   &kp END   &kp HOME  &kp LALT  &kp LCTRL &kp RCTRL &kp LGUI  &kp PG_UP &kp PG_DN &kp ENTER  &kp SPACE
             >;
 
         };
