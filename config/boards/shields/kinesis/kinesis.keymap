@@ -9,6 +9,7 @@
 #define UPPER 2
 #define ADJUST 3
 #define NUM 4
+#define GAMES 5 
 
 
 / {
@@ -69,7 +70,7 @@
 //
 
             bindings = <
-    &trans    &trans    &trans    &trans    &trans    &trans     &trans     &trans    &trans    &to 4    &trans     &trans
+    &trans    &trans    &trans    &trans    &trans    &trans     &trans     &trans    &to GAMES     &to NUM    &trans     &trans
     &trans    &trans    &trans    &trans    &trans    &trans     &trans     &trans    &trans    &trans    &trans     &trans
     &kp ESC   &kp N1    &kp N2    &kp N3    &kp N4    &kp N5     &kp N6     &kp N7    &kp N8    &kp N9    &kp N0     &trans 
     &trans    &trans    &trans    &trans    &trans    &trans     &kp MINUS  &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH   &trans
@@ -175,4 +176,36 @@
             >;
         };
     };
+    
+        games_layer {
+// ----------------------------------------------------------------------------------------------------------------------------
+// |   Esc    |   F1    |   F2    |   F3    |   F4    |   F5    |   F6    |   F7    |   F8    |   BASE    |   RST    |  BTLDR   |
+// |   +/=    |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |    9    |    0     |  -/_     |
+// |   TAB    |    Q    |    W    |    E    |    R    |    T    |    Y    |    U    |    I    |    O    |    P     |  :/\     |
+// |   CTRL   |    A    |    S    |    D    |    F    |    G    |    H    |    J    |    K    |    L    |    ;     |  '/"     |
+// |  LSHIFT  |    Z    |    X    |    C    |    V    |    B    |    N    |    M    |    ,    |    .    |    /     |  RSHIFT  |
+// |          |    ~    |   :/\   |   LA    |   RA    |         |         |    UA   |   DA    |    [    |    ]     |          |
+// |   LGUI   |  SPACE  |   END   |  HOME   |   ALT   |  UPPER  |  LOWER  |   LGUI  |  PgUp   |   PgDn  |  ENTER   |    BS    |
+//
+//                                                        Thumb Cluster
+//                                            -----------------   ------------------
+//                                            | (6,5) | (6,4) |   | (6,7)  | (6,6)  |
+//                                    -------------------------   ---------------------------
+//                                    |       |       | (6,3) |   | (6,8) |        |        |
+//                                    | (6,0) | (6,1) |--------   --------| (6,10) | (6,11) |
+//                                    |       |       | (6,2) |   | (6,9) |        |        |
+//                                    -------------------------   ---------------------------
+//
+
+            bindings = <
+    &kp ESC   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6    &kp F7    &kp I    &to 0     &reset     &bootloader
+    &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0     &kp MINUS
+    &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T     &kp Y     &kp U     &kp I     &kp O     &kp P      &kp BSLH
+    &kp LCTRL &kp A     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI   &kp APOS
+    &kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp SLASH  &kp RSHFT
+    &none     &kp GRAVE &kp BSLH  &kp LEFT  &kp RIGHT &none     &none     &kp UP    &kp DOWN  &kp LBKT  &kp RBKT   &none
+    &kp LGUI  &kp SPACE &kp END   &kp HOME  &kp LALT  &mo LOWER &mo UPPER &kp LGUI  &kp PG_UP &kp PG_DN &kp ENTER  &kp BSPC
+            >;
+
+        };
 };
