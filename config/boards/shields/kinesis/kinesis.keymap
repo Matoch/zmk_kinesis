@@ -55,7 +55,7 @@
 // --------------------------------------------------------------                               |--------------------------------------------------------------
 // |          |         |         |         |         |         |                               |         |         |         | NUMPAD  |          |          |
 // |          |         |         |         |         |         |                               |         |         |         |         |          |          |
-// |          |         |         |         |         |         |                               |         |         |         |         |          |          |
+// |          |    |    |    $    |    <    |    /    |    -    |                               |    _    |    \    |    >    |    ^    |    ~     |          |
 // |          |    +    |    [    |    {    |    (    |    &    |                               |    =    |    )    |    }    |    ]    |    *     |          |
 // |          |         |         |         |         |         |                               |         |         |         |         |          |          |
 // -----------|         |         |         |         |----------                               ----------|         |         |         |          |-----------
@@ -73,7 +73,7 @@
             bindings = <
     &trans       &trans       &trans       &trans       &trans       &trans        &trans       &trans       &to GAMES    &to NUM       &trans          &trans
     &trans       &trans       &trans       &trans       &trans       &trans        &trans       &trans       &trans       &trans        &trans          &trans
-    &trans       &trans       &trans       &trans       &trans       &trans        &trans       &trans       &trans       &trans        &trans          &trans
+    &trans       &kp PIPE     &kp DLLR     &kp LT       &kp SLASH    &kp MINUS     &kp UNDER    &kp BSLH     &kp GT       &kp CARET     &kp TILDE       &trans
     &trans       &kp PLUS     &kp LBKT     &kp LBRC     &kp LPAR     &kp AMPS      &kp EQUAL    &kp RPAR     &kp RBRC     &kp RBKT      &kp ASTRK       &trans
     &trans       &trans       &trans       &trans       &trans       &trans        &trans       &trans       &trans       &trans        &trans          &trans
                  &trans       &trans       &trans       &trans                                  &trans       &trans       &trans        &trans     
